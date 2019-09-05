@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhuofengyuan.mlszm.vote.mapper.ActivityChildMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.zhuofengyuan.mlszm.vote.entity.ActivityChild">
+                <result column="id" property="id" />
+                    <result column="activity_id" property="activityId" />
+                    <result column="begin_time" property="beginTime" />
+                    <result column="end_time" property="endTime" />
+                    <result column="type_id" property="typeId" />
+                    <result column="poll" property="poll" />
+                    <result column="visit" property="visit" />
+                    <result column="status" property="status" />
+                    <result column="news" property="news" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+                id,
+            activity_id, begin_time, end_time, type_id, poll, visit, status
+        </sql>
+
+</mapper>

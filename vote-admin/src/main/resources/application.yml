@@ -1,0 +1,51 @@
+server:
+  port: 8080
+
+fengtoos:
+  ipaddress: 127.0.0.1
+
+spring:
+  application:
+    name: vote-admin
+  profiles:
+    include:
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3306/mlszm_vote?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+      username: root
+      password: 123456
+      initial-size: 5
+      max-active: 20
+      min-idle: 10
+      max-wait: 10
+
+  # redis 配置
+  redis:
+    #数据库索引
+    database: 0
+    # host: 192.168.81.23
+    host: localhost
+    port: 6379
+    password:
+
+  devtools:
+    restart:
+      enabled: true
+
+mybatis-plus:
+  mapperLocations: classpath*:mappers/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.zhuofengyuan.mlszm.vote.entity
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+zk:
+  host: 127.0.0.1:2181
+
+file:
+  temppath: temp
+
